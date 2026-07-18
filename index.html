@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Class f</title>
+  <meta name="description" content="Website Class f dengan tampilan seperti referensi dan bisa diubah admin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-left"></div>
+  <div class="bg-orb orb-right"></div>
+
+  <button class="floating-admin-button" id="openAdminShortcut" type="button" aria-label="Buka panel admin">
+    Admin
+  </button>
+
+  <main class="page-shell ref-layout">
+    <p class="scroll-hint" id="scrollHint">Scroll ke bawah</p>
+
+    <section class="hero-card ref-card">
+      <div class="hero-top ref-top">
+        <span class="hero-kicker" id="welcomeTitle">Selamat Datang</span>
+      </div>
+
+      <p class="hero-byline" id="welcomeByline">BY LUTFIZX</p>
+
+      <div class="brand-ring">
+        <div class="brand-core">
+          <img id="brandImage" alt="Logo Class f" hidden>
+          <div id="brandGeneratedLogo" class="brand-generated-logo" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <h1 class="brand-title" id="brandName">Class f</h1>
+      <p class="brand-subtitle" id="brandTagline">MEDIA</p>
+      <p class="brand-description" id="brandDescription">
+        Website utama Class f dengan tampilan gelap neon yang sama seperti referensi dan tetap bisa diganti oleh admin.
+      </p>
+    </section>
+
+    <section class="section-card ref-card nav-section">
+      <div class="section-heading">
+        <h2 id="menuHeading">Menu Navigasi</h2>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"></div>
+    </section>
+
+    <section class="section-card ref-card about-card">
+      <div class="section-heading">
+        <h2 id="aboutHeading">About Developer</h2>
+        <p id="aboutText">
+          Hubungi sosial media developer di bawah ini.
+        </p>
+      </div>
+
+      <div class="social-links ref-social-links" id="socialLinks"></div>
+    </section>
+  </main>
+
+  <footer class="page-footer ref-footer">
+    <p id="footerText">© 2026 Class f</p>
+  </footer>
+
+  <div class="admin-modal hidden" id="adminModal" aria-hidden="true">
+    <div class="admin-backdrop" id="adminBackdrop"></div>
+    <div class="admin-dialog">
+      <div class="admin-dialog-head">
+        <h3>Akses Admin</h3>
+        <button class="close-button" id="closeAdminModal" type="button" aria-label="Tutup">×</button>
+      </div>
+      <p>Masukkan password admin untuk membuka panel pengaturan.</p>
+      <form id="adminLoginForm" class="admin-login-form">
+        <input type="password" id="adminPasswordInput" placeholder="Masukkan password admin" required>
+        <button type="submit" class="primary-button">Masuk</button>
+      </form>
+      <p class="login-hint">Password awal: <code>classfadmin</code></p>
+      <p class="error-text" id="adminLoginError"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

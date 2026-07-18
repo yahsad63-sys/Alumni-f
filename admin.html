@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Class f</title>
+  <meta name="description" content="Panel admin untuk mengubah konten website Class f.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="admin-page">
+  <div class="bg-orb orb-left"></div>
+  <div class="bg-orb orb-right"></div>
+
+  <main class="admin-shell">
+    <section class="admin-panel">
+      <div class="admin-header">
+        <div>
+          <p class="admin-label">Dashboard</p>
+          <h1>Panel Admin Class f</h1>
+          <p>Ubah teks, logo, menu, link sosial, dan password admin dari halaman ini.</p>
+        </div>
+        <div class="admin-header-actions">
+          <a href="index.html" class="ghost-button">Lihat Website</a>
+          <button type="button" class="primary-button" id="logoutAdmin">Keluar</button>
+        </div>
+      </div>
+
+      <form id="adminForm" class="admin-form">
+        <div class="form-section">
+          <h2>Hero Utama</h2>
+          <div class="form-grid">
+            <label>
+              <span>Judul Sambutan</span>
+              <input type="text" name="welcomeTitle">
+            </label>
+            <label>
+              <span>Byline</span>
+              <input type="text" name="welcomeByline">
+            </label>
+            <label>
+              <span>Nama Brand</span>
+              <input type="text" name="brandName">
+            </label>
+            <label>
+              <span>Tagline</span>
+              <input type="text" name="brandTagline">
+            </label>
+            <label class="full-width">
+              <span>Deskripsi Singkat</span>
+              <textarea name="brandDescription" rows="3"></textarea>
+            </label>
+            <label>
+              <span>Inisial Logo</span>
+              <input type="text" name="brandInitials" maxlength="4">
+            </label>
+            <label class="full-width">
+              <span>URL Gambar Logo</span>
+              <input type="url" name="brandImageUrl" placeholder="https://...">
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Isi Tambahan</h2>
+          <div class="form-grid">
+            <label class="full-width">
+              <span>Teks Tentang Website</span>
+              <textarea name="aboutText" rows="4"></textarea>
+            </label>
+            <label class="full-width">
+              <span>Teks Footer</span>
+              <input type="text" name="footerText">
+            </label>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h2>Menu Navigasi</h2>
+          <p class="section-note">Gunakan ikon: `structure`, `image`, `calendar-days`, `phone`, `link`, `instagram`, `tiktok`.</p>
+          <div class="menu-edit-grid" id="menuEditor"></div>
+        </div>
+
+        <div class="form-section">
+          <h2>Link Sosial</h2>
+          <div class="social-edit-grid" id="socialEditor"></div>
+        </div>
+
+        <div class="form-section">
+          <h2>Keamanan Admin</h2>
+          <div class="form-grid">
+            <label>
+              <span>Password Baru</span>
+              <input type="password" name="adminPassword" placeholder="Kosongkan jika tidak ingin ganti">
+            </label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="ghost-button" id="resetContent">Reset Default</button>
+          <button type="submit" class="primary-button">Simpan Perubahan</button>
+        </div>
+
+        <p class="success-text" id="saveMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>
